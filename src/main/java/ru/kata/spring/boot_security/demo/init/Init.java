@@ -1,4 +1,5 @@
-package ru.kata.spring.boot_security.demo.util;
+package ru.kata.spring.boot_security.demo.init;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.kata.spring.boot_security.demo.model.Role;
@@ -12,14 +13,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Component
-public class Util {
+public class Init {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private User user1;
     private User user2;
 
     @Autowired
-    public Util(UserRepository userRepository, RoleRepository roleRepository) {
+    public Init(UserRepository userRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
     }
