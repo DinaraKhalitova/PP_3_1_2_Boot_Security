@@ -1,13 +1,12 @@
 package ru.kata.spring.boot_security.demo.dao;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.security.UserDetailsServiceImpl;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
@@ -24,7 +23,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public List<User> displayAllUsers() {
+    public List<User> findAll() {
         return entityManager.createQuery("FROM User", User.class).getResultList();
     }
 

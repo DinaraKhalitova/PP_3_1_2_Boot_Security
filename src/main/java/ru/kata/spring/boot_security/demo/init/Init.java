@@ -38,7 +38,7 @@ public class Init {
             role2 = new Role("ROLE_USER");
             roleRepository.save(role2);
         }
-        //password - admin = admin, user = user
+        //password (admin = admin, user = user)
         user1 = new User("admin", "$2a$10$pQHAL3nF4iwu6k9jwHeg5u520N66WmVDiu2bK03WdfGvpFF3QNP92", "admin", "admin", "admin@mail.ru");
         user2 = new User("user", "$2a$10$ACmxffNNV33Ybg5.g3n3y.cu1QHp6AvmDWHU9TeKGvn1oUf7Grt7K", "user", "user", "user@mail.ru");
 
