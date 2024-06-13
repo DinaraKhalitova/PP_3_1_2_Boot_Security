@@ -13,8 +13,8 @@ import java.util.List;
 @Transactional
 public class UserServiceImp implements UserService {
 
-    private UserDAO userDAO;
-    private PasswordEncoder bCryptPasswordEncoder;
+    private final UserDAO userDAO;
+    private final PasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
     public UserServiceImp(UserDAO userDAO, PasswordEncoder bCryptPasswordEncoder) {

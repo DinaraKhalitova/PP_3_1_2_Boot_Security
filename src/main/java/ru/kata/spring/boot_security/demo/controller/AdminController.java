@@ -24,14 +24,14 @@ public class AdminController {
     @GetMapping("/user")
     public String displayAllUsers(Model model) {
         model.addAttribute("allUsers", userService.displayAllUsers());
-        return "all-users";
+        return "users";
     }
 
     @GetMapping("/showAddNewUserForm")
     public String showAddNewUserForm(Model model) {
         model.addAttribute("addUser", new User());
         model.addAttribute("roles", roleService.getRoles());
-        return "add-user";
+        return "adduser";
     }
 
     @PostMapping("/addUser")
@@ -45,7 +45,7 @@ public class AdminController {
         User user = userService.getUser(id);
         model.addAttribute("user", user);
         model.addAttribute("roles", roleService.getRoles());
-        return "edit-user";
+        return "updateuser";
     }
 
     @PostMapping("/saveEditUser")
